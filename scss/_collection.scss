@@ -1,0 +1,139 @@
+.collection {
+    margin: 0 $margin-mobile;
+
+    @media only screen and (min-width: $breakpoint-up-1) {
+        margin: 0;
+    }
+
+    &__title {
+        position: relative;
+        font-family: 'Fraunces', serif;
+        font-weight: 900;
+        font-size: 2.5rem; // 40px
+        line-height: 4.5rem; // 72px
+        text-align: center;
+        text-transform: lowercase;
+        color: #C0C2C3;
+        margin-bottom: 13px;
+
+        @media only screen and (min-width: $breakpoint-up-1) {
+            margin: 0 $margin-tablet;
+            top: 48px; // 48px
+            z-index: -1;
+            font-size: 6rem; // 96px
+        }
+        @media only screen and (min-width: $breakpoint-up-2) { // 1024px
+            margin: 0 $margin-desktop;
+            font-size: 9.375rem; // 150px
+            line-height: 7rem;
+        }
+
+        @media only screen and (min-width: 90em) { // 1440px
+            margin: 0 $margin-desktop-2;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%; // 72px
+            top: 50%; // to vertically center the overlay gradient
+            right: 0;
+            left: 0;
+            transform: translate(0,-50%); // to vertically center the overlay gradient
+            background: linear-gradient(hsla(43, 78%, 98%, 0), hsla(43, 78%, 98%, 1));
+
+            @media only screen and (min-width: $breakpoint-up-1) {
+                height: 164%; // 118px
+            }
+
+            @media only screen and (min-width: $breakpoint-up-2) {
+                height: 175%; // 196px
+
+            }
+        }
+    }
+
+    &__items {
+
+        @media only screen and (min-width: $breakpoint-up-1) {
+            margin: 0 $margin-tablet-2;
+        }
+
+        @media only screen and (min-width: $breakpoint-up-2) { // 1024px
+            margin: 0 $margin-desktop;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        @media only screen and (min-width: 90em) { // 1440px
+            margin: 0 $margin-desktop-2;
+        }
+    }
+
+    .item {
+        margin-bottom: 48px;
+
+        @media only screen and (min-width: $breakpoint-up-1) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            margin-bottom: 0;
+            flex-basis: 23%;
+        }
+
+        figure {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 200px;
+            height: 151px;
+            margin: 0 auto 24px;
+            
+
+            @media only screen and (min-width: $breakpoint-up-1) {
+                width: 255px;
+                height: 193px;
+                margin: 0;
+            }
+
+            @media only screen and (min-width: $breakpoint-up-2) {
+                margin-bottom: 71px;
+            }
+
+            img {
+                display: block;
+                width: 90%;
+
+                @media only screen and (min-width: $breakpoint-up-1) {
+                    width: 85%;
+                }
+            }  
+        }
+
+        &__text {
+
+            @media only screen and (min-width: $breakpoint-up-1) {
+                width: 48%;
+            }
+
+            @media only screen and (min-width: $breakpoint-up-2) {
+                width: 100%;
+                text-align: center;
+            }
+
+            h4 {
+                margin-bottom: 16px;
+
+                @media only screen and (min-width: $breakpoint-up-1) {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}

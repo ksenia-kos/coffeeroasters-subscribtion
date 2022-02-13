@@ -1,0 +1,62 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+
+    @media only screen and (min-width: $breakpoint-up-1) {
+        height: 119px;
+    }
+
+    @media only screen and (min-width: $breakpoint-up-2) {
+        height: 113px;
+    }
+
+    &__logo {
+
+        a {
+            display: flex; // to center image
+
+            img {
+                width: 167px;
+    
+                @media only screen and (min-width: $breakpoint-up-1) {
+                    width: 237px;
+                }
+            }
+        }
+    }
+
+    &__menu-icon {
+        display: flex;
+
+        @media only screen and (min-width: $breakpoint-up-1) {
+            display: none;
+        }
+    }
+
+    &__mobile-menu {
+        visibility: hidden;
+        opacity: 0;
+        position: fixed; // takes the element out of flexbox
+
+        @media only screen and (min-width: $breakpoint-up-1) {
+            display: none;
+        }
+    }
+
+    &__desktop-menu {
+        display: none;
+
+        @media only screen and (min-width: $breakpoint-up-1) {
+            display: block;
+        }
+
+        a {
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }
+}

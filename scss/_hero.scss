@@ -1,0 +1,53 @@
+.hero {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    min-height: 500px;
+    background: url('../assets/home/mobile/image-hero-coffeepress.jpg') center no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 120px;
+
+    @media only screen and (min-width: $breakpoint-up-1) {
+        background-image: url('../assets/home/tablet/image-hero-coffeepress.jpg');
+        margin-bottom: 131px;
+    }
+
+    @media only screen and (min-width: $breakpoint-up-2) {
+        height: 600px;
+        background-image: url('../assets/home/desktop/image-hero-coffeepress.jpg');
+        margin-bottom: calc(136px + 18px);
+    }
+
+    .wrapper {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 24px;
+
+        @media only screen and (min-width: $breakpoint-up-1) {
+            align-items: flex-start;
+            width: 75%; // 9/12
+            padding: 8.43%; // 1/12 or 58px for a 768px screen
+        }
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+            width: 60%;
+            padding: 6.64%; // 85px for a 1440px screen
+        }
+    }
+
+    h1 {
+        margin-bottom: 24px;
+    }
+
+    p {
+        color: $lightCream;
+        margin-bottom: 39px;
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+            width: 73%;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.why {
+    
+
+    &__text {
+        height: 902px;
+        background-color: $darkGreyBlue;
+        border-radius: 6px;
+
+        @media only screen and (min-width: $breakpoint-up-1) {
+            height: 573px;
+        }
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+            height: 577px;
+        }
+
+        h2 {
+            color: $lightCream;
+
+        }
+
+        p {
+            color: $lightCream;
+        }
+    }
+
+    .features {
+        margin: 0 $margin-mobile-2;
+
+        @media only screen and (min-width: $breakpoint-up-1) {
+            margin: 0 $margin-tablet-2;
+        }
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+            margin: 0 $margin-desktop-2;
+        }
+
+        .feature {
+            background-color: $darkCyan;
+            border-radius: 8px;
+
+            h4 {
+                color: $lightCream;
+            }
+
+            p {
+                color: $lightCream;
+
+            }
+        }
+    }
+}
