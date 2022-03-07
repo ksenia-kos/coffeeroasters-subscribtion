@@ -1,0 +1,100 @@
+.footer {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 346px;
+        margin-bottom: 72px;
+        padding: 54px 0;
+        background-color: $darkGreyBlue;
+        text-align: center;
+    
+        @media only screen and (min-width: $breakpoint-up-1) {
+            height: 270px;
+        }
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+            flex-direction: row;
+            align-items: center;
+            height: 120px;
+            margin-bottom: 88px;
+            padding: 0 5.9%;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        width: 218px;
+        height: 26px;
+        margin: 0 auto;
+
+        @media only screen and (min-width: $breakpoint-up-1) {
+            width: 236px;
+        }
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+            //flex-basis: 30%;
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (min-width: $breakpoint-up-1) {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+            flex-basis: 44%;
+        }
+
+        a {
+
+            &:not(:last-child) {
+                margin-bottom: 7.5px;
+
+                @media only screen and (min-width: $breakpoint-up-1) {
+                    margin: 0 32px 0 0;
+                }
+            }
+
+            &:hover {
+                color: $lightCream;
+            }
+        }
+    }
+
+    &__social {
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+            display: flex;
+            justify-content: flex-end;
+            flex-basis: 28%;
+        }
+
+        a {
+            display: inline-block;
+            height: 1.5rem;
+
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+
+            svg path {
+                transition: all 200ms ease-in-out;
+            }
+
+            &:hover svg path {
+                fill: $paleOrange;
+            }
+        }
+    }
+}

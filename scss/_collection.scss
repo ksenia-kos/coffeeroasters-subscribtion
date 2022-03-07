@@ -1,8 +1,12 @@
 .collection {
-    margin: 0 $margin-mobile;
+    margin: 0 $margin-mobile 120px;
 
     @media only screen and (min-width: $breakpoint-up-1) {
-        margin: 0;
+        margin: 0 0 144px;
+    }
+
+    @media only screen and (min-width: $breakpoint-up-2) {
+        margin: 0 0 200px;
     }
 
     &__title {
@@ -55,7 +59,7 @@
 
     &__items {
 
-        @media only screen and (min-width: $breakpoint-up-1) {
+        @media only screen and (min-width: $breakpoint-up-1) { // 768px
             margin: 0 $margin-tablet-2;
         }
 
@@ -63,8 +67,14 @@
             margin: 0 $margin-desktop;
             display: flex;
             flex-flow: row wrap;
-            justify-content: space-between;
+            justify-content: space-around;
         }
+
+        @media only screen and (min-width: 71.875em) { // 1150px
+            justify-content: space-between;
+
+        }
+
         @media only screen and (min-width: 90em) { // 1440px
             margin: 0 $margin-desktop-2;
         }
@@ -73,17 +83,21 @@
     .item {
         margin-bottom: 48px;
 
-        @media only screen and (min-width: $breakpoint-up-1) {
+        @media only screen and (min-width: $breakpoint-up-1) { // 768px
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 32px;
         }
 
-        @media only screen and (min-width: $breakpoint-up-2) {
+        @media only screen and (min-width: $breakpoint-up-2) { // 1024px
             flex-flow: column nowrap;
             justify-content: flex-start;
             margin-bottom: 0;
+            flex-basis: 40%;
+        }
+
+        @media only screen and (min-width: 71.875em) { // 1150px
             flex-basis: 23%;
         }
 

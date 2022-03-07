@@ -73,7 +73,7 @@ h2 {
 
 h3 {
     font-size: 1.75rem; // 28px
-    line-height: 1.12;
+    line-height: 2rem; // 32px
     color: $darkGreyBlue;
 
     @media only screen and (min-width: $breakpoint-up-2) {
@@ -114,6 +114,7 @@ a {
 }
 
 // Buttons
+
 button {
     width: 217px;
     height: 56px;
@@ -129,6 +130,34 @@ button {
 
     &:hover {
         background-color: $brightCyan;
+    }
+}
+
+// Create Plan Buttons
+
+.create-plan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 217px;
+    height: 56px;
+    background-color: $darkCyan;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+
+    &:hover {
+        background-color: $brightCyan;
+    }
+
+    a {
+        font-family: 'Fraunces', serif;
+        font-size: 1.125rem; // 18px
+        font-weight: 900;
+        color: $lightCream;
+        letter-spacing: 0;
+        text-transform: none;
     }
 }
 

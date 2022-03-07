@@ -1,22 +1,36 @@
 .why {
+    position: relative;
+    margin-bottom: calc(597px + 120px);
+
+    @media only screen and (min-width: $breakpoint-up-1) {
+        margin-bottom: calc(290px + 144px);
+    }
+
+    @media only screen and (min-width: $breakpoint-up-2) {
+        margin-bottom: calc(151px + 200px);
+    }
     
 
-    &__text {
+    &__description {
         height: 902px;
         background-color: $darkGreyBlue;
-        border-radius: 6px;
+        border-radius: 10px;
+        padding: 64px 6.4% 0;
 
         @media only screen and (min-width: $breakpoint-up-1) {
             height: 573px;
+            padding: 56px 9.64% 0;
         }
 
         @media only screen and (min-width: $breakpoint-up-2) {
             height: 577px;
+            padding: 100px 25.69% 0;
+            text-align: center;
         }
 
         h2 {
             color: $lightCream;
-
+            margin-bottom: 24px;
         }
 
         p {
@@ -25,27 +39,111 @@
     }
 
     .features {
+        position: absolute;
+        top: 305px;
+        width: 74.4%;
         margin: 0 $margin-mobile-2;
 
         @media only screen and (min-width: $breakpoint-up-1) {
+            top: 275px;
+            width: 74.48%;
             margin: 0 $margin-tablet-2;
         }
 
         @media only screen and (min-width: $breakpoint-up-2) {
+            top: 346px;
+            width: 77.08%;
             margin: 0 $margin-desktop-2;
+            display: flex;
+            justify-content: space-between;
         }
 
         .feature {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            min-height: 382px;
             background-color: $darkCyan;
             border-radius: 8px;
+            margin-bottom: 24px;
 
-            h4 {
-                color: $lightCream;
+            @media only screen and (min-width: $breakpoint-up-1) {
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 180px;
+                padding-left: 12.24%; // 70px
+                padding-right: 8.39%; // 48px
             }
 
-            p {
-                color: $lightCream;
+            @media only screen and (min-width: $breakpoint-up-2) {
+                flex-flow: column nowrap;
+                justify-content: center;
+                width: 31.5%;
+                min-height: 382px;
+                padding: 48px;
+                margin-bottom: 0;
+            }
 
+            &__icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 72px;
+                height: 72px;
+                margin: 0 auto 56px;
+
+                @media only screen and (min-width: $breakpoint-up-1) {
+                    width: 56px;
+                    height: 56px;
+                    margin: 0;
+                }
+
+                @media only screen and (min-width: $breakpoint-up-2) {
+                    width: 72px;
+                    height: 72px;
+                    margin-bottom: 56px;
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            &__text {
+
+                @media only screen and (min-width: $breakpoint-up-1) {
+                    flex-basis: 70%;
+                    text-align: left;
+                }
+
+                @media only screen and (min-width: $breakpoint-up-2) {
+                    flex-basis: auto;
+                    text-align: center;
+                }
+
+                h4 {
+                    color: $lightCream;
+                    margin: 0 4.3% 24px;
+
+                    @media only screen and (min-width: $breakpoint-up-1) {
+                        margin: 0 0 16px;
+                    }
+
+                    @media only screen and (min-width: $breakpoint-up-2) {
+                        margin: 0 0 24px;
+                    }
+                }
+    
+                p {
+                    color: $lightCream;
+                    margin: 0 11.8%;
+
+                    @media only screen and (min-width: $breakpoint-up-1) {
+                        margin: 0;
+                    }
+                }
             }
         }
     }
