@@ -924,8 +924,9 @@ button:hover {
     display: block;
     position: relative;
     top: 15.5px;
+    left: 15.5px;
     z-index: -1;
-    width: calc(66% + 25px);
+    width: calc((100% - 20px) / 3 * 2 + 20px);
     height: 2px;
     background-color: #fddaba;
   }
@@ -933,7 +934,7 @@ button:hover {
 
 @media only screen and (min-width: 64em) {
   .how-it-works .line {
-    width: calc(68.41% + 15.5px);
+    width: 68.41%;
   }
 }
 
@@ -973,6 +974,7 @@ button:hover {
     width: 31px;
     height: 31px;
     border-radius: 50%;
+    z-index: 2;
     border: 2px solid #0e8684;
     background-color: #fefcf6;
     margin-bottom: 48px;
@@ -1172,5 +1174,118 @@ button:hover {
 
 .footer__social a:hover svg path {
   fill: #fddaba;
+}
+
+.plan-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 400px;
+  background: url("../assets/plan/mobile/image-hero-blackcup.jpg") center no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 120px;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .plan-hero {
+    background-image: url("../assets/plan/tablet/image-hero-blackcup.jpg");
+    padding: 58px;
+    margin-bottom: 144px;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .plan-hero {
+    min-height: 450px;
+    background-image: url("../assets/plan/desktop/image-hero-blackcup.jpg");
+    margin-bottom: 168px;
+  }
+}
+
+.plan-hero h1 {
+  margin-bottom: 22px;
+}
+
+@media only screen and (min-width: 64em) {
+  .plan-hero h1 {
+    margin-bottom: 32px;
+  }
+}
+
+.plan-hero p {
+  color: #fefcf6;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .plan-hero p {
+    width: 66%;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .plan-hero p {
+    width: 40%;
+  }
+}
+
+.plan-how {
+  background-color: #343e4c;
+  color: #fefcf6;
+  border-radius: 10px;
+  padding: 80px 0;
+  margin-bottom: 120px;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .plan-how {
+    padding: 96px 0;
+    margin-bottom: 144px;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .plan-how {
+    padding: 100px 0;
+    margin: 0 5.56% 168px;
+  }
+}
+
+.plan-how .how-it-works {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 64em) {
+  .plan-how .how-it-works {
+    margin: 0 6.64%;
+  }
+}
+
+.plan-how .how-it-works .line {
+  z-index: 2;
+}
+
+.plan-how .how-it-works .how-grid {
+  margin-bottom: 0;
+}
+
+.plan-how .how-it-works .circle {
+  background-color: transparent;
+}
+
+.plan-how .how-it-works .step:last-child {
+  margin-bottom: 0;
+}
+
+.plan-how .how-it-works h3 {
+  color: #fefcf6;
 }
 /*# sourceMappingURL=main.css.map */

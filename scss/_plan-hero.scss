@@ -1,0 +1,43 @@
+.plan-hero {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    min-height: 400px;
+    background: url('../assets/plan/mobile/image-hero-blackcup.jpg') center no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 120px;
+
+    @media only screen and (min-width: $breakpoint-up-1) {
+        background-image: url('../assets/plan/tablet/image-hero-blackcup.jpg');
+        padding: 58px;
+        margin-bottom: 144px;
+    }
+
+    @media only screen and (min-width: $breakpoint-up-2) {
+        min-height: 450px;
+        background-image: url('../assets/plan/desktop/image-hero-blackcup.jpg');
+        margin-bottom: 168px;
+    }
+
+    h1 {
+        margin-bottom: 22px;
+        
+        @media only screen and (min-width: $breakpoint-up-2) {
+            margin-bottom: 32px;
+        }
+    }
+
+    p {
+        color: $lightCream;
+
+        @media only screen and (min-width: $breakpoint-up-1) {
+            width: 66%;
+        }
+
+        @media only screen and (min-width: $breakpoint-up-2) {
+            width: 40%;
+        }
+    }
+}

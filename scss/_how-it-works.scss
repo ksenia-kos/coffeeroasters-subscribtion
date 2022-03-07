@@ -28,15 +28,16 @@
         @media only screen and (min-width: $breakpoint-up-1) {
             display: block;
             position: relative;
-            top: 15.5px;
+            top: 15.5px; // move half a circle down
+            left: 15.5px; // move half a circle right
             z-index: -1;
-            width: calc(66% + 25px); // 2/3 of the page plus grid gap
+            width: calc((100% - 20px) / 3 * 2 + 20px);
             height: 2px;
             background-color: $paleOrange;
         }
 
         @media only screen and (min-width: $breakpoint-up-2) {
-            width: calc(68.41% + 15.5px);
+            width: 68.41%;
         }
     }
 
@@ -64,6 +65,7 @@
                 width: 31px;
                 height: 31px;
                 border-radius: 50%;
+                z-index: 2;
                 border: 2px solid $darkCyan;
                 background-color: $lightCream;
                 margin-bottom: 48px;
